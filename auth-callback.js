@@ -30,7 +30,7 @@ exports.handler = async (event, context) => {
             client_secret: 'NUnnRB6lxBVx8ndrV1tW7yDcikSNS5W8',
             grant_type: 'authorization_code',
             code: code,
-            redirect_uri: 'https://dapper-pithivier-a847dc.netlify.app/auth/callback'
+            redirect_uri: 'https://elaborate-cheesecake-080f79.netlify.app/auth/callback'
         };
         
         const tokenResponse = await fetch('https://discord.com/api/v10/oauth2/token', {
