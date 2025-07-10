@@ -1,0 +1,20 @@
+[build]
+  functions = "netlify/functions"
+
+[build.environment]
+  DISCORD_CLIENT_ID = "1381003505376039005"
+  DISCORD_CLIENT_SECRET = "NUnnRB6lxBVx8ndrV1tW7yDcikSNS5W8"
+  BOT_WEBHOOK_URL = "http://SEU_SERVIDOR:5000/auth/webhook"
+
+[[redirects]]
+  from = "/auth/callback"
+  to = "/.netlify/functions/auth-callback"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
